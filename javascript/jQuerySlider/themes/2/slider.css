@@ -1,0 +1,109 @@
+﻿#mcts1 
+{
+    width:106px;/*for the vertical slider, this width is div.item's: width + 2 * borderWidth + paddingLeft + paddingRight */
+    height:300px;
+    margin-right: 40px;
+    padding:14px;
+    background: #f7f7f7 url(loading.gif) no-repeat 50% 50%;
+    border:1px solid #ddd;
+    box-shadow: 0px 1px 3px #CCCCCC;
+    
+    /* Do not alter the below settings*/
+    position:relative;
+    font-size:0px;
+}
+#mcts1>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#mcts1 div.item 
+{
+    width:100px;
+    padding:2px;
+    margin: 0 0 6px 0; /* the 6px specifies the distance between each thumbnail */
+    background-color:White;
+    border:1px solid #DDD;
+    text-align:center;
+    position:relative;/*??*/
+}
+
+#mcts1 img 
+{
+    border:none;
+}
+       
+/*---------built-in navigation bullets--------*/
+/* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
+#mcts1 .navBullets
+{
+    display:none;
+}
+
+
+/*---------navigation buttons-------*/
+#mcts1 .navPrev, #mcts1 .navNext, #mcts1 .navPlay, #mcts1 .navPause 
+{
+    width:29px; height:29px;
+    position:absolute; top:240px;
+    background:url(navButtons.png); 
+    display:block; z-index:5; cursor:pointer;
+}
+#mcts1 .navPrev {background-position:0 -87px;left:410px;}
+#mcts1 .navPrev:hover {background-position:-29px -87px;}
+#mcts1 .navPrevDisabled, #mcts1 .navPrevDisabled:hover {background-position:-58px -87px;cursor:default;}
+
+#mcts1 .navNext {background-position:0 -58px;left:490px;} 
+#mcts1 .navNext:hover {background-position:-29px -58px;} 
+#mcts1 .navNextDisabled, #mcts1 .navNextDisabled:hover {background-position:-58px -58px; cursor:default;} 
+
+#mcts1 .navPause, #mcts1 .navPlay {left:450px;}
+#mcts1 .navPause {background-position:0 0;} 
+#mcts1 .navPause:hover {background-position:-29px 0;} 
+#mcts1 .navPlay {background-position:0 -29px;} 
+#mcts1 .navPlay:hover {background-position:-29px -29px;} 
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+        
+/*---------navigation bullets--------*/
+
+/* Note: When "ScrollAllInView" was set to true in the Javascript, the navBullets won't be displayed.*/
+.navBullets
+{
+    /*display:none;*/ /*set it display:none when you want to hide it*/
+	z-index:5;
+	cursor:pointer;
+	/*Specify the position of navigation buttons*/
+	position:absolute;
+	top:20px;
+	left:220px;
+	width:24px;
+}
+/*.navBullets div defines the style of each bullet*/
+.navBullets div 
+{
+    width:8px; height:8px;
+    background:transparent url(bullets.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:6px;/*margin-right determines the distance between each list item*/
+    _position:relative;/*IE6 hack*/
+}
+
+.navBullets div.focus {background-position:0 -8px;}
+
+
+/* --------- Others ------- */
+#mcts1
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}

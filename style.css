@@ -1,0 +1,137 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Segoe UI";
+}
+#wrapper
+{
+	width: 100%;
+}
+/* css for header */
+header
+{
+	height: 80px;
+	padding: 10px;
+	background-color: white;
+	color: green;
+}
+header h1
+{
+margin-left: 10%;
+}
+
+/* css for main area */
+aside
+{
+float: left;
+width: 23%;
+padding: 20px;
+margin: 10px;
+margin-right: 2%;
+background-color: rgba(15,128,0,0.2);
+border: 1px dashed green;
+}
+section
+{
+margin-right: 0.5%;
+margin-top: 1%;
+float: right;
+width: 68%;
+padding: 10px;
+box-shadow: 1px 1px 3px -1px green inset, -1px -1px 3px -1px green inset;
+}
+.info
+{
+font-family: "Segoe UI";
+width: 600px;
+height: 200px;
+padding : 30px;
+border: 1px solid green;
+margin: 0px auto;
+margin-top: 40px;
+box-shadow: 1px 1px 5px 2px green;
+}
+h2
+{
+text-align: center;
+}
+#pass
+{
+	font-size: 13px;
+	width: 200px;
+	height: 90px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	position: absolute;
+	left: 35%;
+}
+#menu
+{
+	position:relative;
+	z-index:10;
+	height:40px;
+	-webkit-box-shadow: 0 1px 4px #646464;
+	-moz-box-shadow: 0 1px 4px #646464;
+	box-shadow: 0 1px 4px #646464;
+	position:relative;
+	z-index:52;
+	behavior:url(PIE.htc);
+	margin-top:20px;
+	opacity:0.9;
+	background-color: white;
+}
+
+#menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	margin-left:15px;
+
+}
+#menu ul li{
+	display:inline-block;
+	width:90px;
+	box-shadow: 1px 1px 1px 1px #000;
+	text-align:center;
+	margin-right: 20px;
+	margin-top: 2px;
+	padding: 2px;
+}
+#menu ul li a {
+padding-top:11px;
+width:90px;
+display:inline-block;
+color:#454545;
+text-decoration: none;
+font-family:"Arial";
+font-weight:bold;
+}
+#menu ul li a:hover{
+	color:black;
+	background-color: rgba(141,101,98,0.2);
+	position:relative;
+	z-index:53;
+}
+section form
+{
+margin-top: 40px;
+}
+table td,th
+{
+	padding: 5px;
+}
+aside #slider
+{
+height: 150px;
+margin-bottom: 10px;
+background-color: white;
+}
+
+#images
+{
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	margin-left: 30px;
+}

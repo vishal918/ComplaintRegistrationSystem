@@ -1,0 +1,125 @@
+﻿#mcts1 
+{
+    width:780px;
+    height:162px;
+    margin: 0 auto;
+    padding:20px 30px;
+    border:1px solid #dedcb4;
+    background:#f0efdd url(loading.gif) no-repeat 50% 50%;
+    box-shadow: 0px 2px 6px #DDDDDD;
+    border-radius:4px;
+    
+    /* Do not alter the below settings */
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#mcts1>* {display:none;}
+  
+/*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
+#mcts1 div.item 
+{
+    padding:0;
+    margin-right:0; /* this specifies the distance between each thumbnail */
+    border:none;
+    text-align:left;
+    position:relative;
+}
+
+/*-------- style of user defined class ---------*/
+#mcts1 div.each 
+{
+    color:#696F5B;
+    white-space:normal;
+    padding:20px;
+    width:740px;
+    height:164px;
+    background-color:White;
+    border-radius:6px;
+}
+
+#mcts1 .each .content 
+{
+    float:left;
+    padding-left:40px;
+    padding-right:20px;
+    font:normal 12px/14px Verdana;
+    width:220px;
+    height:164px;
+    overflow:auto;
+}
+#mcts1 .each img 
+{
+    border:none;
+    float:left;
+}
+
+
+/*---------navigation buttons-------*/
+#mcts1 .navPrev, #mcts1 .navNext, #mcts1 .navPlay, #mcts1 .navPause 
+{
+    width:45px; height:45px; position:absolute;  
+    background:url(navButtons.png); 
+    background-repeat: no-repeat;
+    display:inline-block; z-index:5; cursor:pointer;
+    top:100px;
+}
+#mcts1 .navPrev {background-position:0 0;left:-24px;}
+#mcts1 .navPrev:hover {background-position:0 -45px;}
+#mcts1 .navPrevDisabled {background-position:0 -90px;cursor:default;}
+
+#mcts1 .navNext {background-position:-45px 0px;right:-24px;} 
+#mcts1 .navNext:hover {background-position:-45px -45px;} 
+#mcts1 .navNextDisabled {background-position:-45px -90px; cursor:default;} 
+
+#mcts1 .navPause, #mcts1 .navPlay {display:none;}
+
+.navPrev, .navPlay, .navPause, .navNext 
+{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+        
+/*---------built-in navigation bullets--------*/
+
+/* Note: the navBullets won't be available when the "scrollByEachThumb" option was set to false in the Javascript.*/
+#mcts1 .navBullets
+{
+    /*display:none;*/ /*set it display:none when you don't need it*/
+	display:block;
+	cursor:pointer;
+	/*Specify its position that is relative to the div#mcts1 */
+	position:absolute;
+	bottom:-46px;
+	left:360px;
+	width:80px;height:20px;
+	z-index:5;
+}
+/* Below defines the style of each bullet*/
+#mcts1 .navBullets a 
+{
+    display:inline-block;
+    width:13px; height:13px;
+    background:transparent url(bullet.png) no-repeat 0 0;
+    float:left;overflow:hidden;vertical-align:middle;cursor:pointer;
+    margin-right:6px;/*margin-right determines the distance between each bullets*/
+}
+#mcts1 .navBullets a:hover {background-position:0 -13px;}
+#mcts1 .navBullets .active {background-position:0 -26px;}
+#mcts1 .navBullets a.active:hover {background-position:0 -26px;}
+
+
+/* --------- Others ------- */
+#mcts1
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
